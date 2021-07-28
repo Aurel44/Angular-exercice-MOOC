@@ -4,7 +4,7 @@
     <p>Mis à jour: {{ lastUpdate }}</p>
 
     <ul class="list-group">
-        <app-appareil *ngFor="let appareil of appareils;let i = index" [appareilName]="appareil.name " [appareilStatus]="appareil.status " [indexOfAppareil]="i"></app-appareil>
+        <app-appareil *ngFor="let appareil of appareils;let i = index" [appareilName]="appareil.name " [appareilStatus]="appareil.status " [indexOfAppareil]="i" [id]="appareil.id"></app-appareil>
     </ul>
     <button class=" btn btn-success my-2" [disabled]="!isAuth " (click)="onAllumer() ">Tout Allumer</button>
     <button class=" btn btn-danger my-2" [disabled]="!isAuth " (click)="onEteindre() ">Tout Eteindre</button>
